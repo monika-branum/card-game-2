@@ -1,4 +1,5 @@
 import { useContext, createContext, useState } from 'react';
+import initialCards from '../cards-data';
 
 const AppContext = createContext();
 
@@ -8,6 +9,8 @@ const AppProvider = ({ children }) => {
   const [from, setFrom] = useState('deck');
   const [playerThreeHand, setPlayerThreeHand] = useState([]);
   const [playerTwoHand, setPlayerTwoHand] = useState([]);
+  const [playerOneHand, setPlayerOneHand] = useState([]);
+  const [deck, setDeck] = useState(initialCards);
 
   return (
     <AppContext.Provider
@@ -22,6 +25,10 @@ const AppProvider = ({ children }) => {
         setPlayerThreeHand,
         playerTwoHand,
         setPlayerTwoHand,
+        playerOneHand,
+        setPlayerOneHand,
+        deck,
+        setDeck,
       }}
     >
       {children}

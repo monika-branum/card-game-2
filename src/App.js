@@ -1,15 +1,10 @@
 import './App.css';
-import initialCards from './cards-data';
 import Player from './components/Player';
 import CardList from './components/CardList';
-import { useState } from 'react';
 import ExecutePassButton from './components/ExecutePassButton';
 import { useAppContext } from './GameContext/Context.js';
 
 function App() {
-  const [deck, setDeck] = useState(initialCards);
-  const [playerOneHand, setPlayerOneHand] = useState([]);
-
   const {
     selectedCard,
     setSelectedCard,
@@ -21,6 +16,10 @@ function App() {
     playerThreeHand,
     playerTwoHand,
     setPlayerTwoHand,
+    playerOneHand,
+    setPlayerOneHand,
+    deck,
+    setDeck,
   } = useAppContext();
   function findCardIndex(value, suit, cards) {
     return cards.findIndex((card) => card.value === value && card.suit === suit);
