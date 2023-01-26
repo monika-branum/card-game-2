@@ -6,9 +6,21 @@ const AppProvider = ({ children }) => {
   const [selectedCard, setSelectedCard] = useState();
   const [to, setTo] = useState(1);
   const [from, setFrom] = useState('deck');
+  const [playerThreeHand, setPlayerThreeHand] = useState([]);
 
   return (
-    <AppContext.Provider value={{ selectedCard, setSelectedCard, to, setTo, from, setFrom }}>
+    <AppContext.Provider
+      value={{
+        selectedCard,
+        setSelectedCard,
+        to,
+        setTo,
+        from,
+        setFrom,
+        playerThreeHand,
+        setPlayerThreeHand,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
