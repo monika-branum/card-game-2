@@ -7,6 +7,7 @@ const AppProvider = ({ children }) => {
   const [to, setTo] = useState(1);
   const [from, setFrom] = useState('deck');
   const [playerThreeHand, setPlayerThreeHand] = useState([]);
+  const [playerTwoHand, setPlayerTwoHand] = useState([]);
 
   return (
     <AppContext.Provider
@@ -19,6 +20,8 @@ const AppProvider = ({ children }) => {
         setFrom,
         playerThreeHand,
         setPlayerThreeHand,
+        playerTwoHand,
+        setPlayerTwoHand,
       }}
     >
       {children}
