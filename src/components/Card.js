@@ -8,8 +8,8 @@ const suitMap = {
   diamonds: '♦️',
 };
 
-export default function Card({ card, selectedCard, setFrom, player }) {
-  const { setSelectedCard } = useAppContext();
+export default function Card({ card, player }) {
+  const { setSelectedCard, setFrom, selectedCard } = useAppContext();
   function handleCardClick() {
     setFrom(player);
     setSelectedCard(card);
