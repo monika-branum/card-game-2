@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-export default function CardList({ cards, player, setFrom, selectedCard, to, setTo }) {
+export default function CardList({ cards, player, setFrom, selectedCard }) {
   return (
     <div className="card-list">
       {cards.map((card) => (
