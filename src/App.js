@@ -13,7 +13,7 @@ function App() {
   const [playerTwoHand, setPlayerTwoHand] = useState([]);
   const [playerThreeHand, setPlayerThreeHand] = useState([]);
   const [from, setFrom] = useState('deck');
-
+  const { to, setTo } = useAppContext();
   const { selectedCard, setSelectedCard } = useAppContext();
   function findCardIndex(value, suit, cards) {
     return cards.findIndex((card) => card.value === value && card.suit === suit);

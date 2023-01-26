@@ -4,8 +4,12 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [selectedCard, setSelectedCard] = useState();
+  const [to, setTo] = useState(1);
+
   return (
-    <AppContext.Provider value={{ selectedCard, setSelectedCard }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ selectedCard, setSelectedCard, to, setTo }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
